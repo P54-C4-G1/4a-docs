@@ -6,5 +6,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 
 public interface IntegrantesRepository extends MongoRepository<Integrantes, String> {
-    List<Integrantes> findByUnidadHabitacional (Integer idunidad);
+    List<Integrantes> findByUnidadHabitacional (String idunidad);
 }

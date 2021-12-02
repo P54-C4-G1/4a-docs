@@ -8,7 +8,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 
 public interface GastosRepository extends MongoRepository<Gastos, String> {
-    List<Gastos> findByIntegrantes(Integer idgasto);
-    List<Gastos> findByUnidadHabitacional(Integer idunidad);
-    List<Gastos> findByCategorias(Integer idcategoria);
+    List<Gastos> findByIntegrantes(String idgasto);
+    List<Gastos> findByUnidadHabitacional(String idunidad);
+    List<Gastos> findByCategorias(String idcategoria);
 }

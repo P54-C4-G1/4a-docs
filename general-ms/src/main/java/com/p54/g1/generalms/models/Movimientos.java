@@ -5,13 +5,13 @@ import java.util.Date;
 
 public class Movimientos {
     @Id
-    private Integer idmovimientos;
+    private String idmovimientos;
     private Date fecha;
-    private Integer idusuario;
+    private String idusuario;
     private String detalle;
     private Float valor;
 
-    public Movimientos(Integer idmovimientos, Date fecha, Integer idusuario, String detalle, Float valor) {
+    public Movimientos(String idmovimientos, Date fecha, String idusuario, String detalle, Float valor) {
         this.idmovimientos = idmovimientos;
         this.fecha = fecha;
         this.idusuario = idusuario;
@@ -19,11 +19,11 @@ public class Movimientos {
         this.valor = valor;
     }
 
-    public Integer getIdmovimientos() {
+    public String getIdmovimientos() {
         return idmovimientos;
     }
 
-    public void setIdmovimientos(Integer idmovimientos) {
+    public void setIdmovimientos(String idmovimientos) {
         this.idmovimientos = idmovimientos;
     }
 
@@ -35,11 +35,11 @@ public class Movimientos {
         this.fecha = fecha;
     }
 
-    public Integer getIdusuario() {
+    public String getIdusuario() {
         return idusuario;
     }
 
-    public void setIdusuario(Integer idusuario) {
+    public void setIdusuario(String idusuario) {
         this.idusuario = idusuario;
     }
 

@@ -4,19 +4,19 @@ import org.springframework.data.annotation.Id;
 
 public class Categorias {
     @Id
-    private Integer idcategoria;
+    private String idcategoria;
     private String nombre;
 
-    public Categorias(Integer idcategoria, String nombre) {
+    public Categorias(String idcategoria, String nombre) {
         this.idcategoria = idcategoria;
         this.nombre = nombre;
     }
 
-    public Integer getIdcategoria() {
+    public String getIdcategoria() {
         return idcategoria;
     }
 
-    public void setIdcategoria(Integer idcategoria) {
+    public void setIdcategoria(String idcategoria) {
         this.idcategoria = idcategoria;
     }
 

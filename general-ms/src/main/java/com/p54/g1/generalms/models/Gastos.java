@@ -5,14 +5,14 @@ import java.util.Date;
 
 public class Gastos {
     @Id
-    private Integer idunidad;
-    private Integer idGasto;
-    private Integer idCategoria;
+    private String idunidad;
+    private String idGasto;
+    private String idCategoria;
     private String detalle;
     private Float Valor;
     private Date fecha;
 
-    public Gastos(Integer idunidad, Integer idGasto, Integer idCategoria, String detalle, Float valor, Date fecha) {
+    public Gastos(String idunidad, String idGasto, String idCategoria, String detalle, Float valor, Date fecha) {
         this.idunidad = idunidad;
         this.idGasto = idGasto;
         this.idCategoria = idCategoria;
@@ -21,27 +21,27 @@ public class Gastos {
         this.fecha = fecha;
     }
 
-    public Integer getIdunidad() {
+    public String getIdunidad() {
         return idunidad;
     }
 
-    public void setIdunidad(Integer idunidad) {
+    public void setIdunidad(String idunidad) {
         this.idunidad = idunidad;
     }
 
-    public Integer getIdGasto() {
+    public String getIdGasto() {
         return idGasto;
     }
 
-    public void setIdGasto(Integer idGasto) {
+    public void setIdGasto(String idGasto) {
         this.idGasto = idGasto;
     }
 
-    public Integer getIdCategoria() {
+    public String getIdCategoria() {
         return idCategoria;
     }
 
-    public void setIdCategoria(Integer idCategoria) {
+    public void setIdCategoria(String idCategoria) {
         this.idCategoria = idCategoria;
     }
 

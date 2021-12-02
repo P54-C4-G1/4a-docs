@@ -6,5 +6,5 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.List;
 
 public interface MovimientosRepository extends MongoRepository<Movimientos, String> {
-    List<Movimientos> findByIntegrantes (Integer idusuario);
+    List<Movimientos> findByIntegrantes (String idusuario);
 }

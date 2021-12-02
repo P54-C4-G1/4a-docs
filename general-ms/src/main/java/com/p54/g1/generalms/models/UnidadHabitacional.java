@@ -4,29 +4,29 @@ import org.springframework.data.annotation.Id;
 
 public class UnidadHabitacional {
     @Id
-    private Integer idunidad;
-    private Integer idusuario;
+    private String idunidad;
+    private String idusuario;
     private String nombre;
 
-    public UnidadHabitacional(Integer idunidad, Integer idusuario, String nombre) {
+    public UnidadHabitacional(String idunidad, String idusuario, String nombre) {
         this.idunidad = idunidad;
         this.idusuario = idusuario;
         this.nombre = nombre;
     }
 
-    public Integer getIdunidad() {
+    public String getIdunidad() {
         return idunidad;
     }
 
-    public void setIdunidad(Integer idunidad) {
+    public void setIdunidad(String idunidad) {
         this.idunidad = idunidad;
     }
 
-    public Integer getIdusuario() {
+    public String getIdusuario() {
         return idusuario;
     }
 
-    public void setIdusuario(Integer idusuario) {
+    public void setIdusuario(String idusuario) {
         this.idusuario = idusuario;
     }
 

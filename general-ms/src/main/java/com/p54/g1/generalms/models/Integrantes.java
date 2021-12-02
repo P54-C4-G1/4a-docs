@@ -4,31 +4,31 @@ import org.springframework.data.annotation.Id;
 
 public class Integrantes {
     @Id
-    private Integer idunidad;
-    private Integer idusuario;
+    private String idunidad;
+    private String idusuario;
     private Boolean administrador;
     private Float abono;
 
-    public Integrantes(Integer idunidad, Integer idusuario, Boolean administrador, Float abono) {
+    public Integrantes(String idunidad, String idusuario, Boolean administrador, Float abono) {
         this.idunidad = idunidad;
         this.idusuario = idusuario;
         this.administrador = administrador;
         this.abono = abono;
     }
 
-    public Integer getIdunidad() {
+    public String getIdunidad() {
         return idunidad;
     }
 
-    public void setIdunidad(Integer idunidad) {
+    public void setIdunidad(String idunidad) {
         this.idunidad = idunidad;
     }
 
-    public Integer getIdusuario() {
+    public String getIdusuario() {
         return idusuario;
     }
 
-    public void setIdusuario(Integer idusuario) {
+    public void setIdusuario(String idusuario) {
         this.idusuario = idusuario;
     }
 
