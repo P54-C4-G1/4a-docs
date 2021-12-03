@@ -9,7 +9,7 @@ public class Gasto {
     private String idgasto;
     private String idcategoria;
     private String detalle;
-    private Float Valor;
+    private Float valor;
     private Date fecha;
 
     public Gasto(String idunidad, String idgasto, String idcategoria, String detalle, Float valor, Date fecha) {
@@ -17,7 +17,7 @@ public class Gasto {
         this.idgasto = idgasto;
         this.idcategoria = idcategoria;
         this.detalle = detalle;
-        Valor = valor;
+        this.valor = valor;
         this.fecha = fecha;
     }
 
@@ -54,11 +54,11 @@ public class Gasto {
     }
 
     public Float getValor() {
-        return Valor;
+        return valor;
     }
 
     public void setValor(Float valor) {
-        Valor = valor;
+        valor = valor;
     }
 
     public Date getFecha() {
