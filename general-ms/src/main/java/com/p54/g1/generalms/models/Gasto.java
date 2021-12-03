@@ -3,19 +3,19 @@ package com.p54.g1.generalms.models;
 import org.springframework.data.annotation.Id;
 import java.util.Date;
 
-public class Gastos {
+public class Gasto {
     @Id
     private String idunidad;
-    private String idGasto;
-    private String idCategoria;
+    private String idgasto;
+    private String idcategoria;
     private String detalle;
     private Float Valor;
     private Date fecha;
 
-    public Gastos(String idunidad, String idGasto, String idCategoria, String detalle, Float valor, Date fecha) {
+    public Gasto(String idunidad, String idgasto, String idcategoria, String detalle, Float valor, Date fecha) {
         this.idunidad = idunidad;
-        this.idGasto = idGasto;
-        this.idCategoria = idCategoria;
+        this.idgasto = idgasto;
+        this.idcategoria = idcategoria;
         this.detalle = detalle;
         Valor = valor;
         this.fecha = fecha;
@@ -29,20 +29,20 @@ public class Gastos {
         this.idunidad = idunidad;
     }
 
-    public String getIdGasto() {
-        return idGasto;
+    public String getIdgasto() {
+        return idgasto;
     }
 
-    public void setIdGasto(String idGasto) {
-        this.idGasto = idGasto;
+    public void setIdgasto(String idgasto) {
+        this.idgasto = idgasto;
     }
 
-    public String getIdCategoria() {
-        return idCategoria;
+    public String getIdcategoria() {
+        return idcategoria;
     }
 
-    public void setIdCategoria(String idCategoria) {
-        this.idCategoria = idCategoria;
+    public void setIdcategoria(String idcategoria) {
+        this.idcategoria = idcategoria;
     }
 
     public String getDetalle() {

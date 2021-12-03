@@ -3,28 +3,28 @@ package com.p54.g1.generalms.models;
 import org.springframework.data.annotation.Id;
 import java.util.Date;
 
-public class Movimientos {
+public class Movimiento {
     @Id
-    private String idmovimientos;
+    private String idmovimiento;
     private Date fecha;
     private String idusuario;
     private String detalle;
     private Float valor;
 
-    public Movimientos(String idmovimientos, Date fecha, String idusuario, String detalle, Float valor) {
-        this.idmovimientos = idmovimientos;
+    public Movimiento(String idmovimiento, Date fecha, String idusuario, String detalle, Float valor) {
+        this.idmovimiento = idmovimiento;
         this.fecha = fecha;
         this.idusuario = idusuario;
         this.detalle = detalle;
         this.valor = valor;
     }
 
-    public String getIdmovimientos() {
-        return idmovimientos;
+    public String getIdmovimiento() {
+        return idmovimiento;
     }
 
-    public void setIdmovimientos(String idmovimientos) {
-        this.idmovimientos = idmovimientos;
+    public void setIdmovimiento(String idmovimiento) {
+        this.idmovimiento = idmovimiento;
     }
 
     public Date getFecha() {

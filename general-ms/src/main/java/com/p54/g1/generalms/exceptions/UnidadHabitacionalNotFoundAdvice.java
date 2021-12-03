@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ControllerAdvice
 @ResponseBody
 
-public class UnidadNotFoundAdvice {
+public class UnidadHabitacionalNotFoundAdvice {
     @ResponseBody
-    @ExceptionHandler(UnidadNotFoundException.class)
+    @ExceptionHandler(UnidadHabitacionalNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    String UnidadNotFoundAdvice(UnidadNotFoundException ex) {
+    String UnidadHabitacionalNotFoundAdvice(UnidadHabitacionalNotFoundException ex) {
         return ex.getMessage();
     }
 }

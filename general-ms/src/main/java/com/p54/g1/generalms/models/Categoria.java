@@ -2,12 +2,12 @@ package com.p54.g1.generalms.models;
 
 import org.springframework.data.annotation.Id;
 
-public class Categorias {
+public class Categoria {
     @Id
     private String idcategoria;
     private String nombre;
 
-    public Categorias(String idcategoria, String nombre) {
+    public Categoria(String idcategoria, String nombre) {
         this.idcategoria = idcategoria;
         this.nombre = nombre;
     }

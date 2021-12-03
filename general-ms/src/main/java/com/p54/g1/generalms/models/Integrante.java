@@ -2,14 +2,14 @@ package com.p54.g1.generalms.models;
 
 import org.springframework.data.annotation.Id;
 
-public class Integrantes {
+public class Integrante {
     @Id
     private String idunidad;
     private String idusuario;
     private Boolean administrador;
     private Float abono;
 
-    public Integrantes(String idunidad, String idusuario, Boolean administrador, Float abono) {
+    public Integrante(String idunidad, String idusuario, Boolean administrador, Float abono) {
         this.idunidad = idunidad;
         this.idusuario = idusuario;
         this.administrador = administrador;

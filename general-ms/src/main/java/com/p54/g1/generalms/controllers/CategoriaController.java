@@ -1,26 +1,26 @@
 package com.p54.g1.generalms.controllers;
 
 import com.p54.g1.generalms.exceptions.CategoriaNotFoundException;
-import com.p54.g1.generalms.models.Categorias;
-import com.p54.g1.generalms.repositories.CategoriasRepository;
+import com.p54.g1.generalms.models.Categoria;
+import com.p54.g1.generalms.repositories.CategoriaRepository;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class CategoriaController {
 
-    private final CategoriasRepository categoriasRepository;
+    private final CategoriaRepository categoriaRepository;
 
-    public CategoriaController(CategoriasRepository categoriasRepository) {
-        this.categoriasRepository = categoriasRepository;
+    public CategoriaController(CategoriaRepository categoriaRepository) {
+        this.categoriaRepository = categoriaRepository;
     }
 
     @GetMapping("/categorias/{idcategoria}")
-    Categorias getCategoria(@PathVariable String idcategoria) {
-        return categoriasRepository.findById(idcategoria).orElseThrow( () -> new CategoriaNotFoundException("No se encontro una categoria con Id: " + idcategoria));
+    Categoria getCategoria(@PathVariable String idcategoria) {
+        return categoriaRepository.findById(idcategoria).orElseThrow( () -> new CategoriaNotFoundException("No se encontro una categoria con Id: " + idcategoria));
     }
 
     @PostMapping("/categorias")
-    Categorias newCategoria(@RequestBody Categorias categorias) {
-        return categoriasRepository.save(categorias);
+    Categoria newCategoria(@RequestBody Categoria categoria) {
+        return categoriaRepository.save(categoria);
     }
 }
