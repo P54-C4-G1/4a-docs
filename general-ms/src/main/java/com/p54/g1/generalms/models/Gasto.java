@@ -5,8 +5,8 @@ import java.util.Date;
 
 public class Gasto {
     @Id
-    private String idunidad;
     private String idgasto;
+    private String idunidad;
     private String idcategoria;
     private String detalle;
     private Float valor;
