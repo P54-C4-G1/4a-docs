@@ -4,8 +4,8 @@ import org.springframework.data.annotation.Id;
 
 public class Integrante {
     @Id
-    private String idunidad;
     private String idusuario;
+    private String idunidad;
     private Boolean administrador;
     private Float abono;
 
