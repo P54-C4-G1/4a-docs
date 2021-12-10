@@ -19,7 +19,7 @@ const gastoTypeDefs = gql `
     }
 
     extend type Query {
-        gastoByidgasto(idgasto: String!): [Gasto]
+        gastoByidgasto(idgasto: String!): Gasto
         gastoByidunidad(idunidad: String!): [Gasto]
         gastoByidcategoria(idcategoria: String!): [Gasto]
     }

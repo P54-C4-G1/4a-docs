@@ -16,7 +16,7 @@ const integranteTypeDefs = gql `
     }
 
     extend type Query {
-        integranteByidusuario(idusuario: String!): [Integrante]
+        integranteByidusuario(idusuario: String!): Integrante
         integranteByidunidad(idunidad: String!): [Integrante]
     }
 

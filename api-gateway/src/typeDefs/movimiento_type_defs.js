@@ -17,7 +17,7 @@ const movimientoTypeDefs = gql `
     }
 
     extend type Query {
-        movimientoByidmovimiento(idmovimiento: String!): [Movimiento]
+        movimientoByidmovimiento(idmovimiento: String!): Movimiento
         movimientoByidusuario(idusuario: String!): [Movimiento]
     }
 

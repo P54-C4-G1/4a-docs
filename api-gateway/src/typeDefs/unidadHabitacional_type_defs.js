@@ -14,7 +14,7 @@ const unidadHabitacionalTypeDefs = gql `
     }
 
     extend type Query {
-        unidadHabitacionalByidunidad(idunidad: String!): [unidadHabitacional]
+        unidadHabitacionalByidunidad(idunidad: String!): unidadHabitacional
     }
 
     extend type Mutation {
