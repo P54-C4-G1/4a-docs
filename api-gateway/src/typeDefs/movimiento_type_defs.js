@@ -3,7 +3,7 @@ const { gql } = require('apollo-server');
 const movimientoTypeDefs = gql `
     type Movimiento {
         idmovimiento: String!
-        fecha: Date!
+        fecha: String!
         idusuario: String!
         detalle: String!
         valor: Float!

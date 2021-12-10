@@ -20,7 +20,7 @@ const authTypeDefs = gql `
         password: String!
         name: String!
         email: String!
-        fecnac: Date!
+        fecnac: String!
     }
 
     type UserDetail {
@@ -29,7 +29,7 @@ const authTypeDefs = gql `
         password: String!
         name: String!
         email: String!
-        fecnac: Date!
+        fecnac: String!
     }
 
     type Mutation {

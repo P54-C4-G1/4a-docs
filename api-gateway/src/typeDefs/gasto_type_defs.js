@@ -7,7 +7,7 @@ const gastoTypeDefs = gql `
         idcategoria: String!
         detalle: String!
         valor: Float!
-        fecha: Date!
+        fecha: String!
     }
 
     input GastoInput {
