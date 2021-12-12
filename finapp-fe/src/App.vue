@@ -4,7 +4,7 @@
     <div class="header">
 
       <h1 v-if="!is_auth" v-on:click="loadLogIn"> ¡Bienvenido! </h1>
-      <h1 v-if="is_auth" v-on:click="loadLogIn"> APP FINANCIERA </h1>
+      <h1 v-if="is_auth" v-on:click="loadLogIn"> FINAPP </h1>
       
     </div>
     
@@ -24,14 +24,12 @@
     <div class="footer">
       <div class="button"> 
         <nav>
-           <button v-if="!is_auth" v-on:click="loadSignUp" > <h2> Registrarse </h2> </button>
            <button v-if="is_auth" v-on:click="loadHome"> <h2> Inicio </h2></button>
         </nav>
       </div>
-      <div class="=button2">
+      <div class="button2">
         <nav>
-          <button v-if="!is_auth" v-on:click="loadLogIn" > <h1> Iniciar Sesión </h1></button>
-          <button v-if="is_auth" v-on:click="logOut"> <h2> Salir </h2></button>
+          <button v-show="is_auth" v-on:click="logOut"> <h2> Salir </h2></button>
          </nav>
       </div>
     </div>
@@ -57,14 +55,6 @@ export default {
 
   methods:{
 
-    loadLogIn: function(){
-      this.$router.push({name: "logIn"})
-    },
-
-    loadSignUp: function(){
-      this.$router.push({name: "signUp"})
-    },
-
     completedLogIn: function(data) {
       localStorage.setItem("username", data.username);
       localStorage.setItem("token_access", data.token_access);
@@ -88,6 +78,10 @@ export default {
 
     loadTransaction: function(){
       this.$router.push({ name: "transaction" });
+    },
+
+    loadLogIn: function(){
+      this.$router.push({name: "logIn"})
     },
 
     logOut: function () {

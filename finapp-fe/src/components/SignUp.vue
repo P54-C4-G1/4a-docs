@@ -20,6 +20,7 @@
                 <br>
 
                 <button type="submit">Registrarse</button>
+                <button v-on:click="loadLogIn">Cancelar</button>
             </form>
         </div>
     </div>
@@ -75,6 +76,9 @@ export default {
         .catch((error) => {
             alert("ERROR: Fallo en el registro.");
         });
+    },
+    loadLogIn: function(){
+      this.$router.push({name: "logIn"})
     },
  },
 }

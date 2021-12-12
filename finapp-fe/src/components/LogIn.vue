@@ -14,6 +14,7 @@
                 <input type="password" v-model="user.password" placeholder="Contraseña">
                 <br>
                 <button type="submit">Iniciar Sesión</button>
+                <button v-on:click="loadSignUp">Registrarse</button>
             </form>
         </div>
         
@@ -68,6 +69,11 @@ export default {
                     alert("ERROR 401: Credenciales Incorrectas.");
                 });
         },
+
+        loadSignUp: function(){
+        this.$router.push({name: "signUp"})
+        },
+
     },
 }
 </script>

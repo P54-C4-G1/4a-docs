@@ -1,12 +1,6 @@
 <template>
     <div class="information">
 
-        
-
-        <div class = "imagen">
-                <img :src="require('../assets/finanzas.png')" alt="" >
-        </div>
-
         <div class="details">
 
             <h1>
@@ -16,16 +10,18 @@
             
             <nav>
                 <button v-on:click="loadAccount"> <h2>LISTA DE PROYECTOS</h2> </button>
-            </nav>
-            <nav>
+                <br>
                 <button v-on:click="loadAccount"><h3>  GASTOS PERSONALES </h3> </button>
-            </nav>
-            <nav>
+                <br>
                 <button v-on:click="loadTransaction"> <h2>CREAR UNIDAD HABITACIONAL</h2> </button>
             </nav>
         
         </div>
        
+        <div class = "imagebox">
+            <img :src="require('../assets/5947.jpg')" alt="" >
+        </div>
+
     </div>
     
 </template>
@@ -89,34 +85,33 @@ export default {
     margin: auto;
     padding: auto;
     width: 100%;
-    height: 100%;
+    height: auto;
 
-    display: flex;
-    flex-direction: column;
+    display:flex;
+    flex-direction:row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 
 .information h1 {
     font-size: 60px;
     color: #283747;
+    font-weight: bold;
     text-align: center;
 }
 
-.information span {
-    color: #283747;
-    font-weight: bold;
+.imagebox {
+    height: auto;
+    width: 40%;
+    margin: auto ;
+    justify-content: center;
 }
 
-.imagen {
-    height: 3px;
-    width: 6px;
-    margin: auto ;
-    border: 0.01px solid #ededed;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: right;
+img {
+    height: auto;
+    width: auto;
+    box-shadow: 10px 10px #aeb3b9;
 }
 
 .details h2{
@@ -129,6 +124,13 @@ export default {
     color: #283747;
 }
 
+nav {
+    display:inline-block;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+
+}
 
 .details nav button{
     color: #151b22;
@@ -146,16 +148,9 @@ export default {
 }
 
 .details {
-    border: 0px solid rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    padding: 30px 80px;
-    margin: 30px 0 0 0;
-    width: 50%;
-    height: 50%;
+    width: 40%;
+    height: auto;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
