@@ -16,7 +16,7 @@
                 <input type="email" v-model="user.email" placeholder="Correo">
                 <br>
 
-                <input type="number" v-model="user.balance" placeholder="Saldo Inicial">
+                <input type="date" v-model="user.fecnac" placeholder="Fecha Nacimiento">
                 <br>
 
                 <button type="submit">Registrarse</button>
@@ -42,7 +42,7 @@ export default {
             password: "",
             name: "",
             email: "",
-            balance: "",
+            fecnac: "",
         },
         };
     },

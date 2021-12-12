@@ -46,7 +46,7 @@ const router = createRouter({
 });
 
 const apolloClient = new ApolloClient({
-    link: createHttpLink({ uri: 'https://mision-tic-api-gateway.herokuapp.com/' }),
+    link: createHttpLink({ uri: 'https://api-gw-g1.herokuapp.com/' }),
     cache: new InMemoryCache()
 })
 

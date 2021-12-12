@@ -6,14 +6,14 @@ import { createApolloProvider } from '@vue/apollo-option'
 import { setContext } from 'apollo-link-context'
 
 const httpLink = createHttpLink({
-    uri: 'https://mision-tic-api-gateway.herokuapp.com/',
+    uri: 'https://api-gw-g1.herokuapp.com/',
 })
 
 const authLink = setContext((_, { headers }) => {
     return {
         headers: {
-        ...headers,
-        "Authorization": localStorage.getItem("token_access") || ""
+            ...headers,
+            "Authorization": localStorage.getItem("token_access") || ""
         }
     }
 })
@@ -28,4 +28,3 @@ const apolloProvider = new createApolloProvider({
 })
 
 createApp(App).use(router).use(apolloProvider).mount('#app')
-
