@@ -38,8 +38,16 @@ class GeneralAPI extends RESTDataSource {
         return await this.get(`/unidades/${idunidad}`);
     }
 
+    async unidadHabitacionalByidusuario(idusuario) {
+        return await this.get(`/unidades/integrante/${idusuario}`);
+    }
+
     async categoriaByidcategoria(idcategoria) {
         return await this.get(`/categorias/${idcategoria}`);
+    }
+
+    async categorias() {
+        return await this.get(`/categorias/`);
     }
 
     async integranteByidusuario(idusuario) {

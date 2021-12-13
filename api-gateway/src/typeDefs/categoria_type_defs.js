@@ -13,6 +13,7 @@ const categoriaTypeDefs = gql `
 
     extend type Query {
         categoriaByidcategoria(idcategoria: String!): Categoria
+        categorias(): [Categoria]
     }
 
     extend type Mutation {

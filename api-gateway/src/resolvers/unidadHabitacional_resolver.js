@@ -6,6 +6,14 @@ const unidadHabitacionalResolver = {
                 return dataSources.generalAPI.unidadHabitacionalByidunidad(idunidad)
             else
                 return null
+        },
+
+        unidadHabitacionalByidusuario: async(_, { idusuario }, { dataSources, userIdToken }) => {
+            usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
+            if (usernameToken != null)
+                return dataSources.generalAPI.unidadHabitacionalByidusuario(idusuario)
+            else
+                return null
         }
     },
     Mutation: {

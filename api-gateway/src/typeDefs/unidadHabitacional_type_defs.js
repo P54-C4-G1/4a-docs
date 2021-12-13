@@ -15,6 +15,7 @@ const unidadHabitacionalTypeDefs = gql `
 
     extend type Query {
         unidadHabitacionalByidunidad(idunidad: String!): unidadHabitacional
+        unidadHabitacionalByidusuario(idusuario: String!): [unidadHabitacional]
     }
 
     extend type Mutation {
