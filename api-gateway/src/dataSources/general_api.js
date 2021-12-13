@@ -11,7 +11,7 @@ class GeneralAPI extends RESTDataSource {
 
     async createunidadHabitacional(unidadhabitacional) {
         unidadhabitacional = new Object(JSON.parse(JSON.stringify(unidadhabitacional)));
-        return await this.post('/unidades', unidadHabitacional);
+        return await this.post('/unidades', unidadhabitacional);
     }
 
     async createCategoria(categoria) {
@@ -44,10 +44,6 @@ class GeneralAPI extends RESTDataSource {
 
     async categoriaByidcategoria(idcategoria) {
         return await this.get(`/categorias/${idcategoria}`);
-    }
-
-    async categorias() {
-        return await this.get(`/categorias/`);
     }
 
     async integranteByidusuario(idusuario) {

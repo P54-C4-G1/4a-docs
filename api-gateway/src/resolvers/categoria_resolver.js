@@ -6,14 +6,8 @@ const categoriaResolver = {
                 return dataSources.generalAPI.categoriaByidcategoria(idcategoria)
             else
                 return null
-        }, 
-        categorias: async(_, { }, { dataSources, userIdToken }) => {
-            usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
-            if (usernameToken != null)
-                return dataSources.generalAPI.categorias()
-            else
-                return null
-        }
+        },
+
     },
     Mutation: {
         createCategoria: async(_, { categoria }, { dataSources, userIdToken }) => {

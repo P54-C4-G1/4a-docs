@@ -7,7 +7,7 @@ const unidadHabitacionalResolver = {
             else
                 return null
         },
-
+        
         unidadHabitacionalByidusuario: async(_, { idusuario }, { dataSources, userIdToken }) => {
             usernameToken = (await dataSources.authAPI.getUser(userIdToken)).username
             if (usernameToken != null)
