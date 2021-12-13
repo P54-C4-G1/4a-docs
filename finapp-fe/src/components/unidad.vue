@@ -1,66 +1,85 @@
 
 <template>
 
-    <div id="Transaction" class="transaction">
-        <div class="container_transaction">
+    <div id="Unidad" class="Unidad">
+        <div class="container_Unidad">
+            <h2>Unidades Habitacionales</h2>
+            <div class="container-table">
+                <table>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nombre</th>
+                        <th>Usuario</th>
+                    </tr>
+
+                    <tr v-for="transaction in transactionByUsername" :key="transaction.id">
+                        <td>{{ transaction.date.substring(0, 10) }}</td>
+                        <td>{{ transaction.date.substring(11, 19) }}</td>
+                        <td>{{ transaction.usernameOrigin }}</td>
+                        <td>{{ transaction.usernameDestiny }}</td>
+                        <td>${{ transaction.value }} COP</td>
+                    </tr>
+                </table>
+            </div>
+
             <h2>Nueva Unidad Habitacional</h2>
 
-            <form v-on:submit.prevent="processTransaction">
+            <form v-on:submit.prevent="processUnidad">
                 <input
                     type="text"
-                    v-model="createTransaction.usernameDestiny"
+                    v-model="createUnidad.usernameDestiny"
                     placeholder="Nombre Unidad"
                 />
                 <br />
                 <input
                     type="number"
-                    v-model="createTransaction.value"
+                    v-model="createUnidad.value"
                     placeholder="cantidad"
                 />
                 <br />
                 <input
                     type="number"
-                    v-model="createTransaction.value"
+                    v-model="createUnidad.value"
                     placeholder="Valor"
                 />
                 <br />
                 <input
                     type="number"
-                    v-model="createTransaction.value"
+                    v-model="createUnidad.value"
                     placeholder="Valor"
                 />
                 <br />
                 <input
                     type="number"
-                    v-model="createTransaction.value"
+                    v-model="createUnidad.value"
                     placeholder="Valor"
                 />
                 <br />
                 <input
                     type="number"
-                    v-model="createTransaction.value"
+                    v-model="createUnidad.value"
                     placeholder="Valor"
                 />
                 <br />
                 <input
                     type="number"
-                    v-model="createTransaction.value"
+                    v-model="createUnidad.value"
                     placeholder="Valor"
                 />
                 <br />
                  <input
                     type="text"
-                    v-model="createTransaction.usernameDestiny"
+                    v-model="createUnidad.usernameDestiny"
                     placeholder="Persona 1"
                 />
                 <br /> <input
                     type="text"
-                    v-model="createTransaction.usernameDestiny"
+                    v-model="createUnidad.usernameDestiny"
                     placeholder="Persona 2"
                 />
                 <br /> <input
                     type="text"
-                    v-model="createTransaction.usernameDestiny"
+                    v-model="createUnidad.usernameDestiny"
                     placeholder="Persona 3"
                 />
                 <br />
@@ -76,11 +95,11 @@
 import gql from "graphql-tag";
 
 export default {
-    name: "Transaction",
+    name: "Unidad",
 
     data: function() {
         return {
-            createTransaction: {
+            createUnidad: {
                 usernameOrigin: localStorage.getItem("username"),
                 usernameDestiny: "",
                 value: "",
@@ -89,7 +108,7 @@ export default {
     },
 
     methods: {
-        processTransaction: async function() {
+        processUnidad: async function() {
 
             if (localStorage.getItem("token_access") === null ||
                     localStorage.getItem("token_refresh") === null ) {
@@ -123,8 +142,8 @@ export default {
             await this.$apollo
                 .mutate({
                     mutation: gql`
-                        mutation($transaction: TransactionInput!) {
-                            createTransaction(transaction: $transaction) {
+                        mutation($Unidad: UnidadInput!) {
+                            createUnidad(Unidad: $Unidad) {
                                 date
                                 id
                                 usernameDestiny
@@ -134,7 +153,7 @@ export default {
                         }
                     `,
                     variables: {
-                        transaction: this.createTransaction,
+                        Unidad: this.createUnidad,
                     },
                 })
             .then((result) => {
@@ -150,7 +169,7 @@ export default {
 
 <style>
 
-.transaction {
+.Unidad {
     margin: 0;
     padding: 0%;
     height: 100%;
@@ -161,7 +180,7 @@ export default {
     align-items: center;
 }
 
-.container_transaction {
+.container_Unidad {
     border: 1px solid #283747;
     border-radius: 10px;
     width: 65%;
@@ -173,19 +192,19 @@ export default {
     align-items: center;
 }
 
-.transaction h2 {
+.Unidad h2 {
     color: #283747;
 }
 
-.transaction h3 {
+.Unidad h3 {
     color: #283747;
 }
 
-.transaction form {
+.Unidad form {
     width: 50%;
 }
 
-.transaction input {
+.Unidad input {
     height: 40px;
     width: 100%;
 
@@ -196,7 +215,7 @@ export default {
     border: 1px solid #283747;
 }
 
-.transaction button {
+.Unidad button {
     width: 100%;
     height: 40px;
 
@@ -209,7 +228,7 @@ export default {
     margin: 5px 0;
 }
 
-.transaction button:hover {
+.Unidad button:hover {
     color: #28313a;
     background: #75a8db;
     border: 1px solid #283747;

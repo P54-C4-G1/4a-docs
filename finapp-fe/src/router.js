@@ -6,7 +6,7 @@ import LogIn from './components/LogIn.vue'
 import SignUp from './components/SignUp.vue'
 import Home from './components/Home.vue'
 import Account from './components/Account.vue'
-import Transaction from './components/Transaction.vue'
+import Unidad from './components/unidad.vue'
 
 const routes = [{
         path: '/user/logIn',
@@ -33,9 +33,9 @@ const routes = [{
         meta: { requiresAuth: true }
     },
     {
-        path: '/user/transaction',
-        name: "transaction",
-        component: Transaction,
+        path: '/user/unidad',
+        name: "unidad",
+        component: Unidad,
         meta: { requiresAuth: true }
     }
 ];

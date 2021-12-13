@@ -9,11 +9,11 @@
             </h1>
             
             <nav>
+                <button v-on:click="loadUnidad"> <h2>UNIDAD HABITACIONAL</h2> </button>
+                <br>
                 <button v-on:click="loadAccount"> <h2>LISTA DE PROYECTOS</h2> </button>
                 <br>
-                <button v-on:click="loadAccount"><h3>  GASTOS PERSONALES </h3> </button>
-                <br>
-                <button v-on:click="loadTransaction"> <h2>CREAR UNIDAD HABITACIONAL</h2> </button>
+                <button v-on:click="loadAccount"> <h3>GASTOS PERSONALES</h3> </button>
             </nav>
         
         </div>
@@ -70,8 +70,8 @@ export default {
         this.$router.push({ name: "account" });
         },
 
-        loadTransaction: function(){
-        this.$router.push({ name: "transaction" });
+        loadUnidad: function(){
+        this.$router.push({ name: "unidad" });
         }
     }
 };
@@ -125,7 +125,8 @@ img {
 }
 
 nav {
-    display:inline-block;
+    display:flex;
+    flex-direction: column;
     flex-grow: 1;
     justify-content: center;
     align-items: center;
@@ -150,8 +151,10 @@ nav {
 .details {
     width: 40%;
     height: auto;
-
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    align-content: center;
 }
 
 

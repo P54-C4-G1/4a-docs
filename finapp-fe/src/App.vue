@@ -4,7 +4,7 @@
     <div class="header">
 
       <h1 v-if="!is_auth" v-on:click="loadLogIn"> ¡Bienvenido! </h1>
-      <h1 v-if="is_auth" v-on:click="loadLogIn"> FINAPP </h1>
+      <h1 v-if="is_auth" v-on:click="loadLogIn"> FinApp </h1>
       
     </div>
     
@@ -36,8 +36,6 @@
     
   </div>
 </template>
-
-
 
 
 <script>
@@ -94,11 +92,6 @@ export default {
 
 </script>
 
-
-
-
-
-
 <style>
 
   body{
@@ -109,47 +102,33 @@ export default {
     margin: 0%;
     padding: 0;
     width: 100%;
-    height: 10vh; 
+    height: 5vh; 
     min-height: 100px;
 
     background-color: #eceaea ;
     color:#0c1925  ;
 
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     align-items: center;
   }
 
   .header h1{
     width: 60%;
     text-align: center;
+    position: sticky;
+    animation-name: animo;
+    animation-duration: 4s;
   }
 
-  .header nav {
-    height: 100%;
-    width: 30%;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    font-size: 20px;
+  @keyframes animo{
+    0%   {color:red; left:0px; top:0px;}
+    25%  {color:yellow; left:200px; top:0px;}
+    50%  {color:blue; left:200px; top:200px;}
+    75%  {color:green; left:0px; top:200px;}
+    100% {color:red; left:0px; top:0px;}
   }
 
-  .header nav button{
-    color: #E5E7E9;
-    background: #283747;
-    border: 1px solid #E5E7E9;
-
-    border-radius: 5px;
-    padding: 10px 20px;
-  }
-
-  .header nav button:hover{
-    color: #a9bacc;
-    background: #E5E7E9;
-    border: 1px solid #28313a;
-  }
 
   .main-component image{
     border: 0px solid  #283747;
@@ -176,7 +155,7 @@ export default {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 20vh;
+    height: 40vh;
     min-height: 100px; 
 
     background-color: #eceaea;
@@ -204,8 +183,8 @@ export default {
     background: #aeb3b9;
     border: 1px solid #E5E7E9;
 
-    border-radius: 5px;
-    padding: 3px 50px;
+    border-radius: 10px;
+    padding: 5px 50px;
     
   }
 
