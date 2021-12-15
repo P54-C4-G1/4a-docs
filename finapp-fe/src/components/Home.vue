@@ -101,17 +101,9 @@ export default {
     text-align: center;
 }
 
-.imagebox {
-    height: auto;
-    width: 40%;
-    margin: auto ;
-    justify-content: center;
-}
-
 img {
     height: auto;
     width: auto;
-    box-shadow: 10px 10px #aeb3b9;
 }
 
 .details h2{

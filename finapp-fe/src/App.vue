@@ -1,26 +1,14 @@
 <template>
-  <div id="app" class="app">
-
-    <div class="header">
-
-      <h1 v-if="!is_auth" v-on:click="loadLogIn"> ¡Bienvenido! </h1>
-      <h1 v-if="is_auth" v-on:click="loadLogIn"> FinApp </h1>
-      
-    </div>
-    
-
     <div class="main-component">
-    
       <router-view  
         v-on:completedLogIn="completedLogIn"
         v-on:completedSignUp="completedSignUp"
         v-on:logOut="logOut"
       >
       </router-view>
-
     </div>
-    
 
+<!-- 
     <div class="footer">
       <div class="button"> 
         <nav>
@@ -33,8 +21,8 @@
          </nav>
       </div>
     </div>
+-->
     
-  </div>
 </template>
 
 
@@ -94,11 +82,55 @@ export default {
 
 <style>
 
-  body{
-    margin: 0 0 0 0;
+  html, body {  
+    margin:0px;  
+    height:100%;  
+  }  
+
+ 
+  .app {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height: 100%;
+    widows: 100%;
   }
 
-  .header{
+  .sidebar {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    display: flexbox ;
+    width: 55%;
+    background-color: #6e74ec;
+    text-align: center;
+  }
+
+  .logo {
+    max-width: 60%;
+    height: auto;
+    padding-bottom: 10%;
+    padding-top: 10%;
+  }
+
+  .welcome {
+    margin: 0px;
+    border: 0px;
+    color: white;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+
+  .appname {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    color: white;
+    padding-top: 10%;
+    padding-bottom: 10%;
+  }
+/**
+.header{
     margin: 0%;
     padding: 0;
     width: 100%;
@@ -193,6 +225,6 @@ export default {
     background: #75a8db;
     border: 1px solid #28313a;
   }
-
+ */
   
 </style>

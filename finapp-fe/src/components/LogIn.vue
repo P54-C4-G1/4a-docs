@@ -1,19 +1,25 @@
 <template>
 
     <div class="logIn_user">
-        <div class = "image"> 
-            <img :src="require('../assets/GRAFICA.png')" alt="">
-        </div>
         
+        <div class="sidebar">
+            <h1 class="welcome">¡Bienvenido!</h1>
+            <img class="logo" :src="require('../assets/FinApp.png')" alt="">
+            <h1 class="appname">FinApp</h1>
+        </div>
+
         <div class="container_logIn_user">
-            <h2>Iniciar sesión</h2>
+            <h2 class="headlogin">Iniciar sesión</h2>
 
             <form v-on:submit.prevent="processLogInUser" >
+                <p>Usuario</p>
                 <input type="text" v-model="user.username" placeholder="Usuario">
                 <br>
+                <p>Contraseña</p>
                 <input type="password" v-model="user.password" placeholder="Contraseña">
                 <br>
-                <button type="submit">Iniciar Sesión</button>
+                <button type="submit">Entrar</button>
+                <p>¿No tienes cuenta? ¡Registrate!</p>
                 <button v-on:click="loadSignUp">Registrarse</button>
             </form>
         </div>
