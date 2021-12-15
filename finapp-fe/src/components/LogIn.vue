@@ -93,8 +93,8 @@ export default {
 <style>
 
     .logIn_user{
-        margin: 0;
-        padding: 0%;
+        margin: 0px;
+        padding: 0px;
         height: 100%;
         width: 100%;
 
@@ -106,8 +106,8 @@ export default {
     .container_logIn_user {
         border: 0px solid  #283747;
         border-radius: 10px;
-        width: 50%;
-        height: 50%;
+        width: 45%;
+        height: 100%;
         
         display: flex;
         flex-direction: column;
